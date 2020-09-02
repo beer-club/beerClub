@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+ 
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 body {
-    font-family: 'Roboto', sans-serif;
+    
     padding:0px;
     margin:0px;
 }
@@ -12,7 +20,6 @@ header {
 
 .logo {
     position: relative;
-    display: block;
     margin-left: 20px;
     height: 66px;
     width: 175px;
@@ -20,21 +27,55 @@ header {
 }
 
 .menu{
-    margin: 0;
-    padding: 0;
-    width: auto;
-    height: 30px;
+    position: relative;
 }
 
-.carousel{
-    height: 300px;
-    width: 1280px;
+#buttons {
+    position: absolute;
+    display: block ;
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel > img{
+    position: relative;
+    top: 10px;
+    width: 1280;
+    height: 482;
 }
 
 .main{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
     background-color: #e5e5e5;
     height: 482px;
     width: 1280px;
+}
+
+#card-banner1{
+    top: 800px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;      
+}
+
+#card-banner2{
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;      
+}
+
+#card-banner3{
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;      
 }
 
 .footer{
