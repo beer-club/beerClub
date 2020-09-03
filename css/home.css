@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+ 
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    
+    padding:0px;
+    margin:0px;
+}
+header {
+    display: flex;
+    background-color: #ffffff;
+}
+
+.searchIcon  img {
+    position: absolute;
+    height: 45px;
+    width: 55px;
+    margin-top: 45px;
+    margin-left: 300px;  
+}
+
+.logo {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 66px;
+    width: 175px;
+    padding: 10px;
+}
+
+.menu {
+    position: relative;
+}
+
+.rightMenu {
+    position: absolute;
+    margin-top: 20px;
+}
+
+.search {
+    position: absolute;
+    height: 30px;
+    width: 250px;
+    margin-top: 60px;
+    margin-left: 570px;
+}
+
+.rightMenu ul {
+    display: flex;
+    list-style: none;
+    color: #000;
+    margin-top: -30px; 
+    margin-left: 920px;
+}
+
+.rightMenu ul li {
+    justify-content: space-between;
+    margin: 50px;
+    text-decoration: none;
+}
+
+.rightMenu ul li a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;    
+}
+
+.rightMenu ul li img {
+    margin-left: 20px;
+    height: 40px;
+    width: 50px;
+}
+
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin-top: 100px;
+    margin-left: 250px;
+}
+
+.menu ul li {
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.func .content {
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 130px;
+}
+
+.func .content span {
+    position: absolute;
+    margin-top: 80px;
+}
+
+.func .content span:last-of-type {
+    position: absolute;
+    margin-top: 210px;
+}
+
+.func .content img:last-of-type {
+    margin-top: 190px;
+    margin-left: 210px;
+}
+
+.func .content h4 {
+    font-weight: normal;
+}
+
+
+.func .content img {
+    position: absolute;
+    margin-top: 70px;
+    height: 65px;
+    width: 75px;
+    margin-left: 200px;
+}
+
+#buttons {
+    position: absolute;
+    display: block ;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    background-color: #6FCF97;
+    top: 10px;
+    width: 100%;
+    height: 320px;
+}
+
+.carousel img {
+    margin-left: 45px;
+}
+
+.func{
+    position: relative;
+    background-color: #e5e5e5;
+    height: 482px;
+    width: 100%;
+}
+
+.planos {
+    background-color: #6FCF97;
+    height: 450px;
+}
+
+.planos h1 {
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 20px;
+}
+
+.func img {
+    margin-left: 50px;
+    margin-top: 50px;
+    height: 400px;
+    width: 450px;
+}
+
+.func h1 {
+    position: absolute;
+    margin-left: 770px;
+    margin-top: 30px;
+}
+
+.gridass {
+    display: grid;
+    margin-left: 110px;
+    position: absolute;
+    margin-top: 110px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    justify-content: space-around;
+    grid-column-gap: 140px;
+}
+
+.griditem {
+    background-color: #e5e5e5;
+    width: 300px;
+    border-radius: 4px;
+    height: 300px; 
+}
+
+.griditem > span {
+    color: #000;
+    font-weight: bold;
+}
+ 
+.assinAva {
+    height: 150px;
+    width: 160px;
+    padding: 10px;
+    margin-top: 65px;
+    margin-left: 60px;
+    border-radius: 50%;
+}
+
+.griditem h1 {
+    position: absolute;
+    margin-left: 55px;
+    text-align: center;
+    color: #000;
+}
+
+
+
+.assinQuant {
+    margin-left: 110px;
+    color: #000;
+}
+
+.assinPrec {
+    margin-left: 120px;
+    color: #000;
+}
+
+.det {
+    margin-top: 5px;
+    margin-left: 120px;
+}
+
+.footer{
+    height: 70px;
+    width: 1280px;
+}
+
+.footer h1 {
+    text-align: center;
+    margin-top: 20px;
+}
