@@ -1,0 +1,285 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'Oswald', sans-serif;
+}
+
+html,body{
+	height: 100%;
+}
+
+.container{
+	width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+	margin:0 auto;
+}
+
+.clear{
+	clear: both;
+}
+
+.line-titulo{
+	max-width: 1400px;
+	margin:0 auto;
+	position: relative;
+	text-align: center;
+}
+
+.ln1{
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	top:20px;
+	background:black;
+}
+
+
+.line-titulo h2{
+	position: relative;
+	background: white;
+	display: inline-block;
+	text-align: center;
+	font-size: 27px;
+	padding:0 20px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.vitrine-destaque {
+    width: 310px;
+}
+
+.vitrine-destaque .cerveja-img{
+    /*Verificar*/
+    width: 300px;
+    height: 280px;
+}
+
+.vitrine-destaque h2{
+    /*Verificar*/
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100%;
+    height: 60px;
+	color: black;
+	font-style: italic;
+	font-size: 20px;
+}
+
+.vitrine-destaque p{
+    /*Verificar*/
+	padding-top: 8px;
+	padding-left: 8px;
+	color: #353535;
+	font-size: 15px;
+	font-style: italic;
+}
+
+.preco {
+    /*Verificar*/
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.qtyProd {
+    /*Verificar*/
+	text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	line-height: 40px;
+	background-color:#fff;
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+	font-style: italic;
+	width: 40px;
+}
+
+.arrLeft, .arrRight{
+    /*Verificar*/
+	text-align: center;
+    display: inline-block;
+    margin-bottom: 10px;
+	line-height: 40px;
+	background-color:#FC591F;
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	font-style: italic;
+	width: 40px;
+}
+
+section.venda{
+    /*Verificar*/
+	padding:90px 2%;
+	min-height: 90%;
+}
+
+.content-venda{
+	margin-top:40px;
+}
+
+.sidebar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.search1{
+	width:90%;
+}
+
+.search1 h2{
+	font-size: 24px;
+	color: black;
+	font-weight: normal;
+}
+
+.search1 .barra-preco{
+	width: 100%;
+	height: 20px;
+	background: white;
+	border:1px solid #ccc;
+	margin-top:8px;
+	border-radius: 20px;
+	position: relative;
+}
+
+.barra-preco-fill{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30%;
+	height: 20px;
+	border-radius: 20px;
+	background:linear-gradient(to bottom,rgb(255,255,255),rgb(200,200,200));
+}
+
+.pointer-barra{
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	left: calc(30% - 13px);
+	top: -3px;
+	cursor: pointer;
+	border-radius: 8px;
+	background:linear-gradient(to bottom,rgb(255,255,255),rgb(180,180,180));
+	border:1px solid  #777;
+}
+
+.valor-pesquisa{
+	margin-top:8px;
+}
+
+.valor-pesquisa p{
+	color: black;
+	font-size: 15px;
+}
+
+.valor-pesquisa p:nth-of-type(1){
+	float: left;
+}
+
+.valor-pesquisa p:nth-of-type(2){
+	float: right;
+}
+
+.search2{
+	margin-top:40px;
+}
+
+.search2 h2{
+	font-size: 24px;
+	color: black;
+	font-weight: normal;
+}
+
+.form-venda-wraper{
+	margin-top:10px;
+}
+
+.form-venda-wraper input[type=checkbox]{
+	display: none;
+}
+
+.form-venda-wraper label{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border:1px solid #ccc;
+	border-radius: 3px;
+	vertical-align: top;
+	cursor: pointer;
+	position: relative;
+}
+
+.circle{
+	width: 8px;
+	height: 8px;
+	display: none;
+	border-radius: 4px;
+	background: black;
+	position: absolute;
+	left: 6px;
+	top: 6px;
+}
+
+.form-venda-wraper input[type=checkbox]:checked + label > .circle{
+	display: block;
+}
+
+.form-venda-wraper span{
+	padding:0 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.vitrine-venda{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 35px;
+}
+
+.vitrine-venda .vitrine-destaque{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.info-produto{
+    /*Verificar*/
+	display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.cerveja-img {
+	transform: scale(.5);
+}
+
+.cerveja-img:hover {
+	transform: scale(1);
+}
+
+@media screen and (max-width: 568px){
+
+	.container{
+		position: absolute;
+		display: inline;
+	}
+	
+	.search2, .form-venda-wraper, .vitrine-destaque {
+		display: inline-block;
+		justify-self: center;
+	}
+
+}
