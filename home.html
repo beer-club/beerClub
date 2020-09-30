@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BeerClub</title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+</head>
+<body>
+
+<header>
+	<div class="container">
+		<img src="img/logo.png" class="logo">
+		<nav class="desktop-menu">
+        <div class="search-box">
+       	  <input class="search-txt" type="text" name="" placeholder="Pesquisar...">
+       	  <a href="#" class="search-btn">
+       	  	<i class="fas fa-search"></i>
+       	  </a>
+       </div>
+		<ul>
+			<li><a href="">O Club</a></li>
+			<li><a href="">Acessórios</a></li>
+			<li><a href=""></a>Kits</li>
+			<li><a href="">Cervejas</a></li>
+			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</ul>    
+	</nav>
+
+	<nav class="mobile-menu">
+		<ul>
+			<li><a href="">O Club</a></li>
+			<li><a href="">Acessórios</a></li>
+			<li><a href=""></a>Kits</li>
+			<li><a href="">Cervejas</a></li>
+			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</ul>
+	</nav>
+
+
+  <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="">&times;</span>
+      <img src="img/carrinho.jpg" alt="" class="CadastroLogin">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+	<div class="clear"></div><!--clear-->
+
+	</div><!--container-->
+</header>
+
+<section class="slider">
+	<div class="w3-content w3-section">
+	     <img class="mySlides" src="img/banner001.jpg" style="width:100%">
+	     <img class="mySlides" src="img/banner002.jpg" style="width:100%">
+	     <img class="mySlides" src="img/banner003.jpg" style="width:100%">
+	     <img class="mySlides" src="img/banner004.jpg" style="width:100%">
+	</div>
+
+</section><!--Carrosel-->
+
+<section class="sessao2">
+		<h2>Ofertas em destaque</h2>
+		<div class="container1">
+			<div class="texto-sessao2">
+				<div class="destaque">
+					<div class="prodDestaque">
+						<p>Cerveja</p>
+					</div>
+					<div class="prodDestaque">
+						<p>Cerveja Premium</p>
+					</div>
+					<div class="prodDestaque">
+						<p class="">Cervejas Importad</p>
+					</div>
+					<div class="prodDestaque">
+						<p>Últimas unidades</p>
+					</div>
+				</div><!--destaque-->
+
+				<div class="secao"><p class="Typo--bold">Você está na seção <span class="">Melhores da Semana</span></p>
+				</div><!--secao-->
+			</div><!--texto-sessao1-->	
+
+			<div  class="cerveja01" id="cerveja">
+				<div class="beer01">
+					<div class="texto_card">
+						<img src="img/beer01.png" class="beer01_img"alt="">
+						<p>Nome produto</p>  
+					</div>
+					<div class="RatingStars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+					<div class="preco">
+						<button>
+							<link rel="stylesheet" type="text/css" href="">Ver o preço
+						</button>
+					</div>
+				</div>
+
+				<div class="beer01">
+					<div class="texto_card">
+						<img src="img/beer01.png" class="beer01_img"alt="">
+						<p>Nome produto</p>  
+					</div>
+					<div class="RatingStars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+					<div class="preco">
+						<button>
+							<link rel="stylesheet" type="text/css" href="">Ver o preço	
+						</button>
+					</div>
+				</div>
+
+				<div class="beer01">
+					<div class="texto_card">
+						<img src="img/beer01.png" class="beer01_img"alt="">
+						<p>Nome produto</p>  
+					</div>
+					<div class="RatingStars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+					<div class="preco">
+						<button>
+							<link rel="stylesheet" type="text/css" href="">Ver o preço	
+						</button>
+					</div>
+				</div>
+
+				<div class="beer01">
+					<div class="texto_card">
+						<img src="img/beer01.png" class="beer01_img"alt="">
+						<p>Nome produto</p>  
+					</div>
+					<div class="RatingStars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+					<div class="preco">
+						<button>
+							<link rel="stylesheet" type="text/css" href="">Ver o preço
+						</button>
+					</div>
+				</div>
+			</div>
+</section><!--sessao2-->
+
+<section class="sessao3">
+			<div class="part1">
+				<div class="wraper-part1">
+					<h2>Um pouco mais sobre nós</h2>
+					<p>+DE 1 MIL DE CLIENTES</p>
+					<p>PAGAMENTOS SEM STRESS</p>
+					<p>AQUI TEM FRETE GRÁTIS</p>
+				</div>
+			</div><!--part1-->
+
+			<div class="part2">
+				<div class="scrollEquipe">
+					<div class="scroll-wraper">	
+						<div class="sobre-autor">
+							<div class="titulo-autor">
+								<div class="wraper-titulo-autor">
+									<h2>Guilherme Grillo</h2>
+									<p>Co-Founder / Desenvolvedor</p>
+								</div><!--wraper-titulo-autor-->
+								<div class="img-autor"></div>
+							</div><!--titulo-autor-->
+							<div class="texto-autor">
+								<p>Proin sagittis, risus ut tempus condimentum, urna est volutpat augue, a placerat ligula magna tincidunt sapien.
+								Ut tempus pulvinar ante, at euismod orci.</p>
+							</div><!--texto-autor-->
+						</div><!--sobre-autor-->
+
+					</div><!--scroll-wraper-->	
+				</div><!--scrollEquipe-->
+
+				<div class="slider-bullets">
+					<span style="background-color:rgb(170,170,170);"></span>
+					<span></span>
+					<span></span>
+				</div><!--slider-bullets-->
+
+			</div><!--part2-->
+			<div class="clear"></div>
+</section><!--sessao3-->
+
+
+<section class="newsletter"><!--sessao5-->
+		<div class="newsletter01">
+			<h2>Assine a nossa newsletter</h2>
+			<p class="fiqueDentro">Fique por dentro do universo dos escritórios flexíveis e do futuro do trabalho</p>
+
+			<form id="formLeadB2BNewHome" class="formNewNoticia">
+				<input type="email" class="emailInputBottom" placeholder="E-mail">
+
+				<div class="wrap-btn-email">
+					<input id="emailBottomBtn" class="btn_enviar" type="submit" value="Enviar">
+				</div>
+
+			</form>
+		</div>
+</section><!--sessao5-->
+
+
+<section class="relacionamento"><!--sessao6-->
+				<div class="inform_usuario">
+					<div class="conosco">
+						<h2>Fale conosco</h2>
+						<p>(11)4893-3023</p>
+						<p>Horário de Atendimento</p>
+						<p>Segunda a Sexta das 9h ás 18h</p>
+						<p>(exceto feriados)</p>
+						<p>atendimento@beerClub</p>
+
+						<h4>Central de atendimento</h4>
+						<ul>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Sobre nós</a></li>
+							<li><a href="#">como comprar</a></li>
+							<li><a href="#">Troca devoluções</a></li>
+							<li><a href="#">Politica de frete</a></li>
+							<li><a href="#">Clube de assinatura</a></li>
+							<li><a href="#">Parcerias</a></li>
+							<li><a href="#">Politica  + Termos de Uso</a></li>
+						</ul>
+
+					</div>
+
+				   <div class="pagamento">
+						<h2>Formas de Pagamento</h2>
+                       <div class="imgPagamentos">
+                       	  <img src="img/mastercard.png">
+                       	  <img src="img/american-express.png">
+                       	  <img src="img/mestro.png">
+                       	  <img src="img/paypal2.png">
+                       	  <img src="img/visa.png">          	  
+                       </div>
+                 	</div>
+
+					<div class="oClub">
+						<img src="img/logo.png">
+						<ul>
+							<li><a href="#">Cerveja</a></li>
+							<li><a href="#">Marcas</a></li>
+							<li><a href="#">Acessórios</a></li>
+							<li><a href="#">Kits</a></li>
+							<li><a href="#">Recomendações</a></li>
+							<li><a href="#">Lançamentos</a></li>
+							<li><a href="#">Promoções</a></li>					
+						</ul>
+					</div>
+				</section><!--sessao6-->
+
+<footer>
+		<div class="container">
+			<p>Ambev S.A.: Rua Renato Paes de Barros, 1.017, 4º andar , Itaim-Bibi, São Paulo, SP - CEP 04530-001</p>
+			<p>A loja online do Emporiodacerveja.com.br é operada pela Infracommerce CNPJ: 15.427.207/0002-03 / Inscrição Estadual: 298.167.930.119 / Endereço: Rua José Semiao Rodrigues</p>
+			<p>Agostinho 1370 - Galpão 25 - Embu das Artes - SP - CEP: 06833-370</p>
+			<div class="clear"></div>
+		</div><!--container-->
+</footer>
+
+
+ <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
