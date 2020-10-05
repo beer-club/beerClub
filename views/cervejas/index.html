@@ -12,6 +12,10 @@
                 <div class="ln1"></div>
                 <h2>Cervejas</h2>
         </div><!--line-titulo-->
+
+        <aside class="sideCart">
+        
+        </aside>
     
         <div class="content-venda">
             <div class="container">
@@ -156,7 +160,7 @@
                 <div class="btnContainer">
                 <span class="arrLeft">-</span>
                     <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
+                <span class="arrRight onlyOneBut">+</span>
                 </div>
             </div><!--info-produto-->
         </div><!--vitrine-destaque-->
@@ -166,5 +170,30 @@
         </div><!--content-venda-->
     
     </section><!--venda-->
+    <script>
+
+        const cartAddButton = document.querySelectorAll('.arrRight');
+
+        function openCart() {
+            document.querySelector('.content-venda').style.width = '70%';
+            document.querySelector('.sideCart').style.display = 'block';
+        }
+
+        function closeCart() {
+            document.querySelector('.content-venda').style.width = '100%';
+            document.querySelector('.sideCart').style.display = 'none';
+        }
+
+        cartAddButton.forEach((item) => {
+            item.addEventListener('click', openCart);
+        });
+
+        const deleteButton = document.querySelectorAll('.arrLeft');
+
+        deleteButton.forEach((item) => {
+            item.addEventListener('click', closeCart);
+        });
+
+    </script>
 </body>
 </html>
