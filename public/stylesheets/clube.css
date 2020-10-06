@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/*COMO FUNCIONA O PRIME*/
+
+.howItWorks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin-bottom: 40px;
+}
+
+.divTitle {
+    border-bottom: 3px solid #92bc23;
+}
+
+.secondaryTitle {
+    font-size: 1.7em;
+    margin-bottom: 3px;
+}
+
+.ulHowItWorks {
+    list-style: none;
+    text-align: center;
+}
+
+li > h2 {
+    font-size: 2.5em;
+    margin: 15px;
+    color: #92bc23;
+}
+
+section > ul > li > p {
+    color: #6d6c6c;
+    font-size: 1em;
+    /*font-weight: bold;*/
+}
+
+/*COMO PRIME, VOCÊ TEM BENEFÍCIOS INCRÍVEIS*/
+
+.benefits,
+.plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.allBenefits {
+    margin: 20px 20px 20px;
+}
+
+.benefits1,
+.benefits2,
+.benefits3 {
+    width: 100%;
+    height: 281px;
+    background-color: #92bc23;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.img, .btn {
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+.titileBenefit {
+    margin-top: 30px;
+    font-size: 1.6em;
+    text-align: center;
+    color: #fff;
+}
+
+/*SE CADASTRE NO NOSSO CLUBE*/
+.plans {
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.fistPlan,
+.secondPlan,
+.thirdPlan{
+    margin: 50px 10px 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #92bc23;
+    border-radius: 15px;
+    height: 455px;
+}
+
+.imgBeer {
+    text-align: center;
+    overflow: hidden;
+}
+
+.imgBeer img {
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+}
+
+.imgBeer:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.beer {
+    width: 250px;
+    height: 250px;
+}
+
+.titlePlans {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+
+.valuePlans {
+    text-align: center;
+    color: #6d6c6c;
+    margin: 10px 10px 50px 10px;
+}
+
+
+.btnStyle {
+    background-color: #92bc23;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: 200ms;
+}
+
+.btnStyle:hover {
+    background-color: #ffffff;
+    border: 1px solid #92bc23;
+    color: black;
+}
+
+/*DESKTOP*/
+
+@media (min-width: 768px) {
+    .ulHowItWorks {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+
+    li {
+        margin: 20px;
+    }
+
+    .allBenefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .benefits1,
+    .benefits2,
+    .benefits3 {
+        margin: 20px;
+    }
+
+    .optionsOfPlans {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .fistPlan,
+    .secondPlan,
+    .thirdPlan{
+        margin: 20px;
+    }
+}
