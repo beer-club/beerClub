@@ -14,4 +14,7 @@ router.get('/kits', function(req, res, next) {
   res.render('kits', { title: 'Express' });
 });
 
+router.get('/acessorios', function(req, res, next) {
+  res.render('acessorios', { title: 'Express' });
+});
 module.exports = router;
