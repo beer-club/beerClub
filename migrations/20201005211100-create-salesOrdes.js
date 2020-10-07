@@ -1,3 +1,4 @@
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('salesOrders', {
@@ -16,12 +17,12 @@ module.exports = {
       customer_id: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Customer',
+          model: 'customers',
           key: 'id'
         }
       },
       date: {
-        type: Sequelize.date,
+        type: Sequelize.DATE,
         allowNull: false
       },
       name: {
@@ -29,7 +30,7 @@ module.exports = {
         allowNull: false
       },
       address: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       addressNumber: {
         type: Sequelize.INTEGER
