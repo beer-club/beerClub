@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const CustomerController = require('../controllers/customer');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -21,4 +22,8 @@ router.get('/kits', function(req, res, next) {
 router.get('/acessorios', function(req, res, next) {
   res.render('acessorios', { title: 'Express' });
 });
+
+// Clientes
+router.post('/customers', CustomerController.create);
+
 module.exports = router;

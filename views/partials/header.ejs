@@ -28,16 +28,18 @@
 			<li><a href="/kits">Kits</a></li>
 			<li><a href="/cervejas">Cervejas</a></li>
 			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+			<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Cadastre-se</button>
 		</ul>    
 	</nav>
 
 	<nav class="mobile-menu">
 		<ul>
-			<li><a href="">O Clube</a></li>
-			<li><a href="">Acessórios</a></li>
-			<li><a href=""></a>Kits</li>
-			<li><a href="">Cervejas</a></li>
+			<li><a href="/clube">O Clube</a></li>
+			<li><a href="/acessorios">Acessórios</a></li>
+			<li><a href="/kits"></a>Kits</li>
+			<li><a href="/cervejas">Cervejas</a></li>
 			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+			<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Cadastre-se</button>
 		</ul>
 	</nav>
 
@@ -69,6 +71,41 @@
     </div>
   </form>
 </div>
+
+<div id="id02" class="modal">
+  
+	<form class="modal-content animate" action="" method="post">
+	  <div class="imgcontainer">
+		<span onclick="document.getElementById('id02').style.display='none'" class="close" title="">&times;</span>
+		<img src="images/carrinho.jpg" alt="" class="CadastroLogin">
+	  </div>
+  
+	  <div class="container">
+		<label for="uname"><b>Username</b></label>
+		<input type="text" placeholder="Enter Username" name="uname" required>
+  
+		<label for="psw"><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" name="psw" required>
+
+		<label for="cpf"><b>CPF</b></label>
+		<input type="cpf" placeholder="Digite seu CPF" name="cpf" required>
+
+		<label for="tel"><b>Telefone</b></label>
+		<input type="tel" placeholder="Digite seu tel" name="tel" required>
+		  
+		<br>
+		<button type="submit">Cadastrar</button>
+		<label>
+		  <input type="checkbox" checked="checked" name="remember"> Remember me
+		</label>
+	  </div>
+  
+	  <div class="container" style="background-color:#f1f1f1">
+		<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+		<span class="psw">Forgot <a href="#">password?</a></span>
+	  </div>
+	</form>
+  </div>
 
 
 	<div class="clear"></div><!--clear-->
