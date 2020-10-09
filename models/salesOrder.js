@@ -33,11 +33,17 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'salesOrders',
   });
   
-  Customer.associate = (models) => {
-    Customer.belongsTo(models.Customer, {
+  SalesOrder.associate = (models) => {
+    SalesOrder.belongsTo(models.Customer, {
         foreignkey: 'customers_id',
         targetKey: 'id',
         as: 'pedido'
+    });
+    SalesOrder.belongsToMany(models.OrderProduct, {
+      foreignkey: 'salesorders_id',
+      targetKey: 'id',
+      as: 'pedido',
+      through: 'OrderProduct'
     });
     
   }
