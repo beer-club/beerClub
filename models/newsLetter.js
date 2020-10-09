@@ -1,6 +1,6 @@
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  const NewsLetter = suquelize.define('NewsLetter', {
+  const NewsLetter = sequelize.define('NewsLetter', {
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -15,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'NewsLetter',
     tableName: 'newsLetters'
   });
-  NewsLetter.associate = (models) => {
+  /*NewsLetter.associate = (models) => {
     // icluir aqui relações de associação das chaves com as outras tabelas
-  }
+  }*/
   return NewsLetter;
 };

@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     date: {
-      type: DataTypes.date,
+      type: DataTypes.DATE,
       allowNull: false,
     },
     name: DataTypes.STRING,
@@ -33,13 +33,13 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'salesOrders',
   });
   
-  Customer.associate = (models) => {
+  /* Customer.associate = (models) => {
     Customer.belongsTo(models.Customer, {
         foreignkey: 'customers_id',
         targetKey: 'id',
         as: 'pedido'
     });
     
-  }
+  }*/
   return SalesOrder;
 };

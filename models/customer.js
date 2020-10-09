@@ -37,15 +37,15 @@ module.exports = (sequelize, DataTypes) => {
   Customer.associate = (models) => {
     Customer.belongsTo(models.RecoverPassword, {
       foreignkey: 'RecoverPasswords_customers_id',
-      targetKey: 'customers_id',
+      targetKey: 'id',
       as: 'cliente'
     });
-    Customer.belongsToMany(models.Subscription, {
+    /*Customer.belongsToMany(models.Subscription, {
       foreignkey: 'customers_id',
       targetKey: 'id',
       as: 'assinaturasCliente',
       through: 'Subscription'
-    });
+    });*/
   }
   return Customer;
 };

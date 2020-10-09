@@ -16,12 +16,12 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'ProductType',
     tableName: 'productTypes'
   });
-  ProductType.associate = (models) => {
+  /* ProductType.associate = (models) => {
     ProductType.hasMany(models.Product, {
       foreignkey: 'productTypes_typeCode',
       targetKey: 'typeCode',
       as: 'tipoProduto'
     });
-  }
+  } */
   return ProductType;
 };

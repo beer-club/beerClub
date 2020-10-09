@@ -16,13 +16,13 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'KindBeer',
     tableName: 'kindBeers'
   });
-  kindbeer.associate = (models) => {
+  /* KindBeer.associate = (models) => {
     KindBeer.hasMany(models.Product, {
       foreignkey: 'kindBeers_kindCode',
       targetKey: 'kindCode',
       as: 'tipoCerveja'
     });
 
-  }
+  }*/
   return KindBeer;
 };

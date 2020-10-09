@@ -20,8 +20,13 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Subscription',
     tableName: 'subscriptions'
   });
-  ProductSuplier.associate = (models) => {
-    // relacionamento
-  }
-  return ProductSuplier;
+  /* Subscription.associate = (models) => {
+  Subscription.belongsToMany(models.Subscription, {
+    foreignkey: 'customers_id',
+    targetKey: 'id',
+    as: 'a',
+    through: 'Subscription'
+  })
+}; */
+  return Subscription;
 };

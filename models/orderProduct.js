@@ -16,21 +16,21 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     amount: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
     },
     price: {
-      type: Sequelize.DECIMAL(5,2),
+      type: DataTypes.DECIMAL(5,2),
     },
     totalAmount: {
-      type: Sequelize.DECIMAL(8,2)
+      type: DataTypes.DECIMAL(8,2)
     },
   }, {
     sequelize,
     modelName: 'OrderProduct',
     tableName: 'orderproducts'
   });
-  OrderProduct.associate = (models) => {
+  /* OrderProduct.associate = (models) => {
     // Relação
-  }
+  }*/
   return OrderProduct;
 };

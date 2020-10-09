@@ -20,8 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'ProductSuplier',
     tableName: 'productSupliers'
   });
-  ProductSuplier.associate = (models) => {
+  /*ProductSuplier.associate = (models) => {
     // Relação
-  }
+  }*/
   return ProductSuplier;
 };

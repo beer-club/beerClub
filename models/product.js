@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'products',
   });
   
-  Product.associate = (models) => {
+  /* Product.associate = (models) => {
     Product.belongsTo(models.KindBeer, {
       foreignkey: 'kindBeers_kindCode',
       targetKey: 'kindCode',
@@ -63,6 +63,6 @@ module.exports = (sequelize, DataTypes) => {
       through: 'Subscription'
     });
 
-  }
+  } */
   return Product;
 };

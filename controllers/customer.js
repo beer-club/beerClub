@@ -1,14 +1,18 @@
-const Customer = require('../models/customer');
+const { Customer } = require('../models');
+const { sequelize } = require('../models');
 
 module.exports = CustomerController = {
-    create: (req, res) => {
-        const { email, password, cpf, phoneNumber } = req.body;
+    create: async (req, res) => {
+        const { email, password, cpf, phoneNumber, username } = req.body;
+        
+        console.log(email, password, cpf, phoneNumber, username);
 
-        const createdCustomer = new Customer({
+        const createdCustomer = await Customer.create({
             email,
             password,
             cpf,
-            phoneNumber
+            phoneNumber,
+            name: username
         });
 
         res.status(201).json({
