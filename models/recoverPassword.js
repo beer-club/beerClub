@@ -1,6 +1,6 @@
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  const RecorverPassword = sequelize.define('RecorverPassword', {
+  const RecoverPassword = sequelize.define('RecoverPassword', {
     token: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -18,12 +18,12 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'RecoverPassword',
     tableName: 'recoverPasswords'
   });
-  RecorverPassword.associate = (models) => {
-    RecorverPassword.hasMany(models.Customer, {
+  RecoverPassword.associate = (models) => {
+    RecoverPassword.hasMany(models.Customer, {
       foreignkey: 'customers_id',
       targetKey: 'id',
       as: 'senha'
     });
   }
-  return ProductType;
+  return RecoverPassword;
 };

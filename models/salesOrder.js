@@ -45,7 +45,11 @@ module.exports = (sequelize, DataTypes) => {
       as: 'pedido',
       through: 'OrderProduct'
     });
-    
+    SalesOrder.belongToMany(models.Traking, {
+        foreignkey: 'salesOrders_id',
+        targetKey: 'id',
+        as: 'trakingPedido'
+    });
   }
   return SalesOrder;
 };
