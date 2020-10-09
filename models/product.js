@@ -62,6 +62,23 @@ module.exports = (sequelize, DataTypes) => {
       as: 'assinaturas',
       through: 'Subscription'
     });
+    Product.belongsToMany(models.OrderProduct, {
+      foreignkey: 'products_id',
+      targetKey: 'id',
+      as: 'produtosDoPedido',
+      through: 'OrderProduct'
+    });
+    Product.belongsToMany(models.ProductKit, {
+      foreignkey: 'products_id',
+      targetKey: 'id',
+      as: 'kitsDeProduto',
+      through: 'ProductKit'
+    });
+    Product.hasMany(model.Inventory, {
+      foreignkey: 'product_id',
+      targetKey: 'id',
+      as: ''
+    });
 
   } */
   return Product;
