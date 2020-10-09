@@ -1,6 +1,13 @@
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  const ProductSuplier = sequelize.define('ProductSuplier', {
+  const Subscription = sequelize.define('Subscription', {
+    customer_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Customer',
+        key: 'id'
+      }
+    },
     products_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -8,20 +15,13 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
-    supliers_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'Suplier',
-        key: 'id'
-      }
-    },
   }, {
     sequelize,
-    modelName: 'ProductSuplier',
-    tableName: 'productSupliers'
+    modelName: 'Subscription',
+    tableName: 'subscriptions'
   });
   ProductSuplier.associate = (models) => {
-    // Relação
+    // relacionamento
   }
   return ProductSuplier;
 };

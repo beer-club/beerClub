@@ -50,6 +50,19 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'typeCode',
       as: 'tipoProduto'
     });
+    Product.belongsToMany(models.ProductSuplier, {
+      foreignkey: 'products_id',
+      targetKey: 'id',
+      as: 'FornecedoresDoProduto',
+      through: 'ProductSuplier'
+    });
+    Product.belongsToMany(models.Subscription, {
+      foreignkey: 'products_id',
+      targetKey: 'id',
+      as: 'assinaturas',
+      through: 'Subscription'
+    });
+
   }
   return Product;
 };

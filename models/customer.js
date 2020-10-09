@@ -40,12 +40,12 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'customers_id',
       as: 'cliente'
     });
-    /*
-    Product.belongsTo(models.ProductType, {
-      foreignkey: 'productTypes_typeCode',
-      targetKey: 'typeCode',
-      as: 'tipoProduto'
-    });*/
+    Customer.belongsToMany(models.Subscription, {
+      foreignkey: 'customers_id',
+      targetKey: 'id',
+      as: 'assinaturasCliente',
+      through: 'Subscription'
+    });
   }
   return Customer;
 };
