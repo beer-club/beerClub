@@ -36,20 +36,16 @@ module.exports = (sequelize, DataTypes) => {
   
   Customer.associate = (models) => {
     Customer.belongsTo(models.RecoverPassword, {
-<<<<<<< HEAD
-      foreignkey: 'RecoverPasswords_customers_id',
-=======
       foreignkey: 'customers_id',
->>>>>>> 9452a15044bff0f0d63915eea3ff4b0715ea6812
       targetKey: 'id',
       as: 'cliente'
     });
-    /*Customer.belongsToMany(models.Subscription, {
+    Customer.belongsTo(models.Subscription, {
       foreignkey: 'customers_id',
-      targetKey: 'id',
+      //targetKey: 'id',
       as: 'assinaturasCliente',
       through: 'Subscription'
-    });*/
+    });
   }
   return Customer;
 };

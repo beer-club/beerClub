@@ -24,13 +24,15 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Suplier',
     tableName: 'supliers'
   });
-  /* Suplier.associate = (models) => {
+  Suplier.associate = (models) => {
+    /*
     Suplier.belongsToMany(models.ProductSuplier, {
       foreignkey: 'supliers_id',
       targetKey: 'id',
       as: 'ProdutosDoFornecedor',
       through: 'ProductSuplier'
     });
-  } */
+    */
+  };
   return Suplier;
 };

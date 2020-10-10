@@ -20,13 +20,14 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Subscription',
     tableName: 'subscriptions'
   });
-  /* Subscription.associate = (models) => {
-  Subscription.belongsToMany(models.Subscription, {
-    foreignkey: 'customers_id',
-    targetKey: 'id',
-    as: 'a',
-    through: 'Subscription'
-  })
-}; */
+  Subscription.associate = (models) => {
+    Subscription.hasOne(models.Customer, {
+      foreignkey: 'customers_id',
+      targetKey: 'id',
+      as: 'a',
+     through: 'Customer'
+    })
+  
+  }; 
   return Subscription;
 };

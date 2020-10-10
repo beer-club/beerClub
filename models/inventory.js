@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'inventorys'
   });
   Inventory.associate = (models) => {
+    /*
     Inventory.belongsTo(models.Product, {
       foreignkey: 'product_id',
         targetKey: 'id',
@@ -36,6 +37,7 @@ module.exports = (sequelize, DataTypes) => {
         targetKey: 'id',
         as: 'movimentoInventario'
     });
+    */
   }
   return Inventory;
 };

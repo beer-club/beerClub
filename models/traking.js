@@ -17,12 +17,13 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'trakings'
   });
   Traking.associate = (models) => {
+    /*
     traking.belongToMany(models.SalesOrder, {
       foreignkey: 'salesOrders_id',
       targetKey: 'id',
       as: 'PedidoTraking'
     });
-
+    */
   }
   return Traking;
 };

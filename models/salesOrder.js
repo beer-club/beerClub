@@ -33,21 +33,13 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'salesOrders',
   });
   
-<<<<<<< HEAD
-  /* Customer.associate = (models) => {
-    Customer.belongsTo(models.Customer, {
-=======
   SalesOrder.associate = (models) => {
+  /*
     SalesOrder.belongsTo(models.Customer, {
->>>>>>> 9452a15044bff0f0d63915eea3ff4b0715ea6812
         foreignkey: 'customers_id',
         targetKey: 'id',
         as: 'pedido'
     });
-<<<<<<< HEAD
-    
-  }*/
-=======
     SalesOrder.belongsToMany(models.OrderProduct, {
       foreignkey: 'salesorders_id',
       targetKey: 'id',
@@ -59,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
         targetKey: 'id',
         as: 'trakingPedido'
     });
+    */
   }
->>>>>>> 9452a15044bff0f0d63915eea3ff4b0715ea6812
   return SalesOrder;
 };

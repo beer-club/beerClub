@@ -39,7 +39,8 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'products',
   });
   
-  /* Product.associate = (models) => {
+  Product.associate = (models) => {
+    /*
     Product.belongsTo(models.KindBeer, {
       foreignkey: 'kindBeers_kindCode',
       targetKey: 'kindCode',
@@ -79,7 +80,7 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'id',
       as: ''
     });
-
-  } */
+    */
+  } 
   return Product;
 };
