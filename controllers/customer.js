@@ -7,16 +7,20 @@ module.exports = CustomerController = {
         
         console.log(email, password, cpf, phoneNumber, username);
 
-        const createdCustomer = await Customer.create({
-            email,
-            password,
-            cpf,
-            phoneNumber,
-            name: username
-        });
+        try {
+            const createdCustomer = await Customer.create({
+                email,
+                password,
+                cpf,
+                phoneNumber,
+                name: username
+            });
 
-        res.status(201).json({
-            customer: createdCustomer
-        });
+            res.status(201).json({
+                customer: createdCustomer
+            });
+        } catch(error) {
+            console.log(error)
+        }
     }
 }
