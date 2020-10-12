@@ -41,6 +41,9 @@ module.exports = {
       status: {
         type: Sequelize.INTEGER
       },
+      imagem: {
+        type: Sequelize.STRING
+      },
       kindBeers_kindCode: {
         type: Sequelize.INTEGER,
         allowNull: false,
