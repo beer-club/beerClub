@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Inventory',
     tableName: 'inventorys'
   });
+  
   Inventory.associate = (models) => {
     /*
     Inventory.belongsTo(models.Product, {
