@@ -1,29 +1,33 @@
 const { Model, DATE } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  const Traking = sequelize.define('Traking', {
+  const Delivery = sequelize.define('Delivery', {
     salesOrders_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    traking: {
-      type: DataTypes.STRING,
+    deliveryCode: {
+      type: DataTypes.INTEGER,
     },
-    statusDate: {
+    deliveryDate: {
+      type: DataTypes.DATE,
+    },
+    deliveryTimestamp: {
       type: DataTypes.DATE,
     },
   }, {
     sequelize,
-    modelName: 'Traking',
-    tableName: 'trakings'
+    modelName: 'Delivery',
+    tableName: 'deliverys'
   });
+
   Traking.associate = (models) => {
     /*
-    traking.belongToMany(models.SalesOrder, {
+    Delivery.belongToMany(models.SalesOrder, {
       foreignkey: 'salesOrders_id',
       targetKey: 'id',
-      as: 'PedidoTraking'
+      as: 'EntregaPedido'
     });
     */
   }
-  return Traking;
+  return Delivery;
 };
