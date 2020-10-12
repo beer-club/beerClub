@@ -1,6 +1,8 @@
 <%- include('partials/header')%>
 
 <link href="stylesheets/cervejas.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 
     <section class="venda">
         <div class="line-titulo">
@@ -9,7 +11,8 @@
         </div><!--line-titulo-->
 
         <aside class="sideCart">
-        
+            <span onclick="closeCart()" class="close" title="">&times;</span>
+            <p>Carrinho</p>
         </aside>
     
         <div class="content-venda">
@@ -78,9 +81,7 @@
                 <p>Tipo: IPA</p>
                 <span class="preco">R$ 19,50</span>
                 <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
+                <span class="addToCart">Adicionar</span>
                 </div>
             </div><!--info-produto-->
         </div><!--vitrine-destaque-->
@@ -93,9 +94,7 @@
                 <p>Tipo: IPA</p>
                 <span class="preco">R$ 25,90</span>
                 <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
+                <span class="addToCart">Adicionar</span>
                 </div>
             </div><!--info-produto-->
         </div><!--vitrine-destaque-->
@@ -108,9 +107,7 @@
                 <p>Tipo: IPA</p>
                 <span class="preco">R$ 15,90</span>
                 <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
+                <span class="addToCart">Adicionar</span>
                 </div>
             </div><!--info-produto-->
         </div><!--vitrine-destaque-->
@@ -123,9 +120,7 @@
                 <p>Tipo: IPA</p>
                 <span class="preco">R$ 15,90</span>
                 <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
+                <span class="addToCart">Adicionar</span>
                 </div>
             </div><!--info-produto-->
         </div><!--vitrine-destaque-->
@@ -138,9 +133,7 @@
                 <p>Tipo: IPA</p>
                 <span class="preco">R$ 14,90</span>
                 <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
+                <span class="addToCart">Adicionar</span>
                 </div>
             </div><!--info-produto-->
         </div><!--vitrine-destaque-->
@@ -153,9 +146,7 @@
                 <p>Tipo: IPA</p>
                 <span class="preco">R$ 16,42</span>
                 <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight onlyOneBut">+</span>
+                <span class="addToCart">Adicionar</span>
                 </div>
             </div><!--info-produto-->
         </div><!--vitrine-destaque-->
@@ -167,7 +158,8 @@
     </section><!--venda-->
     <script>
 
-        const cartAddButton = document.querySelectorAll('.arrRight');
+        const cartItems = [];
+        const cartAddButton = document.querySelectorAll('.addToCart');
 
         function openCart() {
             document.querySelector('.content-venda').style.width = '70%';
@@ -181,6 +173,7 @@
 
         cartAddButton.forEach((item) => {
             item.addEventListener('click', openCart);
+            cartItems.push(item);
         });
 
         const deleteButton = document.querySelectorAll('.arrLeft');
@@ -189,5 +182,9 @@
             item.addEventListener('click', closeCart);
         });
 
+        console.log(cartItems);
+
     </script>
+
+    
 <%- include('partials/footer')%>
