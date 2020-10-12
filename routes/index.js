@@ -15,6 +15,10 @@ router.get('/cervejas', function(req, res, next) {
   res.render('cervejas', { title: 'Express' });
 });
 
+router.get('/cervejas2', function(req, res, next) {
+  res.render('cervejas2', { title: 'Express' });
+});
+
 router.get('/kits', function(req, res, next) {
   res.render('kits', { title: 'Express' });
 });
