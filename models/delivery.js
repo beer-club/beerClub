@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'deliverys'
   });
 
-  Traking.associate = (models) => {
+  Delivery.associate = (models) => {
     /*
     Delivery.belongToMany(models.SalesOrder, {
       foreignkey: 'salesOrders_id',
