@@ -12,11 +12,16 @@ router.get('/clube', function(req, res, next) {
 });
 
 router.get('/cervejas', function(req, res, next) {
-  res.render('cervejas', { title: 'Express' });
-});
+  let cervejas = [
+    {id:1, name:'Cerveja Antuérpia American IPA 500ml', img:'images/antuerpia.webp', fabricante: 'Antuerpia', tipo: 'IPA', price: 19.50},
+    {id:2, name:'Cerveja Antuérpia American IPA 500ml', img:'images/colorado_indica.webp', fabricante: 'Antuerpia', tipo: 'IPA', price: 19.50},
+    {id:3, name:'Cerveja Antuérpia American IPA 500ml', img:'images/antuerpia.webp', fabricante: 'Antuerpia', tipo: 'IPA', price: 19.50},
+    {id:4, name:'Cerveja Antuérpia American IPA 500ml', img:'images/antuerpia.webp', fabricante: 'Antuerpia', tipo: 'IPA', price: 19.50},
+    {id:5, name:'Cerveja Antuérpia American IPA 500ml', img:'images/antuerpia.webp', fabricante: 'Antuerpia', tipo: 'IPA', price: 19.50},
+    {id:6, name:'Cerveja Antuérpia American IPA 500ml', img:'images/antuerpia.webp', fabricante: 'Antuerpia', tipo: 'IPA', price: 19.50}
+  ];
 
-router.get('/cervejas2', function(req, res, next) {
-  res.render('cervejas2', { title: 'Express' });
+  res.render('cervejas', {cervejas: cervejas});
 });
 
 router.get('/kits', function(req, res, next) {
