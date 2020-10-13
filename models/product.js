@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.DECIMAL(7,2),
     measureUnit: DataTypes.STRING,
     status: DataTypes.TINYINT,
+    imagem: DataTypes.STRING,
     kindBeers_kindCode: {
       type: DataTypes.INTEGER,
       references: {
