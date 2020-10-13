@@ -21,13 +21,14 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'subscriptions'
   });
   Subscription.associate = (models) => {
+    /*
     Subscription.hasOne(models.Customer, {
       foreignkey: 'customers_id',
       targetKey: 'id',
       as: 'a',
-     through: 'Customer'
+      through: 'Customer'
     })
-  
-  }; 
+   */
+  }
   return Subscription;
 };

@@ -27,18 +27,19 @@ module.exports = (sequelize, DataTypes) => {
   });
   
   Inventory.associate = (models) => {
-    /*
-    Inventory.belongsTo(models.Product, {
+    
+    Inventory.hasMany(models.Product, {
       foreignkey: 'product_id',
         targetKey: 'id',
         as: 'inventario'
     });
-    Inventory.hasMany(models.InventoryRecord, {
+    
+    Inventory.belongsTo(models.InventoryRecord, {
       foreignkey: 'inventorys_id',
         targetKey: 'id',
         as: 'movimentoInventario'
     });
-    */
+    
   }
   return Inventory;
 };

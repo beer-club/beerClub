@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
   });
   
   Product.associate = (models) => {
-    /*
+    
     Product.belongsTo(models.KindBeer, {
       foreignkey: 'kindBeers_kindCode',
       targetKey: 'kindCode',
@@ -52,36 +52,40 @@ module.exports = (sequelize, DataTypes) => {
       targetKey: 'typeCode',
       as: 'tipoProduto'
     });
+    
     Product.belongsToMany(models.ProductSuplier, {
       foreignkey: 'products_id',
       targetKey: 'id',
-      as: 'FornecedoresDoProduto',
-      through: 'ProductSuplier'
+      as: 'fornecedoresDoProduto',
+      through: 'productsupliers'
     });
+    
     Product.belongsToMany(models.Subscription, {
       foreignkey: 'products_id',
       targetKey: 'id',
       as: 'assinaturas',
-      through: 'Subscription'
+      through: 'subscriptions'
     });
     Product.belongsToMany(models.OrderProduct, {
       foreignkey: 'products_id',
       targetKey: 'id',
       as: 'produtosDoPedido',
-      through: 'OrderProduct'
+      through: 'orderProducts'
     });
     Product.belongsToMany(models.ProductKit, {
       foreignkey: 'products_id',
       targetKey: 'id',
       as: 'kitsDeProduto',
-      through: 'ProductKit'
+      through: 'productKits'
     });
-    Product.hasMany(model.Inventory, {
+    
+    Product.belongsToMany(models.Inventory, {
       foreignkey: 'product_id',
       targetKey: 'id',
-      as: ''
+      as: 'estoque',
+      through: 'inventorys'
     });
-    */
+    
   } 
   return Product;
 };

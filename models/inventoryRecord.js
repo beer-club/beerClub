@@ -23,13 +23,13 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'inventoryrecords'
   });
   InventoryRecord.associate = (models) => {
-    /*
-    InventoryRecord.belongsToMany(models.Inventory, {
+    
+    InventoryRecord.hasMany(models.Inventory, {
       foreignkey: 'inventorys_id',
         targetKey: 'id',
         as: 'movimentoInventario'
     });
-    */
+    
   }
   return InventoryRecord;
 };

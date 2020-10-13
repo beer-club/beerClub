@@ -19,13 +19,13 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'recoverPasswords'
   });
   RecoverPassword.associate = (models) => {
-    /*
+    
     RecoverPassword.hasMany(models.Customer, {
       foreignkey: 'customers_id',
       targetKey: 'id',
       as: 'senha'
     });
-    */
+    
   }
   return RecoverPassword;
 };

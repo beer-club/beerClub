@@ -42,10 +42,19 @@ module.exports = (sequelize, DataTypes) => {
     });
     Customer.belongsTo(models.Subscription, {
       foreignkey: 'customers_id',
-      //targetKey: 'id',
+      targetKey: 'id',
       as: 'assinaturasCliente',
       through: 'Subscription'
     });
+/*
+    Customer.belongsTo(models.SalesOrder, {
+      foreignkey: 'customers_id',
+      targetKey: 'id',
+      as: 'pedidosDoCliente',
+      
+    });
+*/
+
   }
   return Customer;
 };
