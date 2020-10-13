@@ -3,17 +3,11 @@ module.exports = (sequelize, DataTypes) => {
   const ProductSuplier = sequelize.define('ProductSuplier', {
     products_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'Product',
-        key: 'id'
-      }
+      foreignkey: true,
     },
     supliers_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'Suplier',
-        key: 'id'
-      }
+      foreignkey: true,
     },
   }, {
     sequelize,

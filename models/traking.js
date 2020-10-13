@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     salesOrders_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      foreignkey: true,
     },
     traking: {
       type: DataTypes.STRING,
@@ -18,9 +19,9 @@ module.exports = (sequelize, DataTypes) => {
   });
   
   Traking.associate = (models) => {
-    Traking.hasMany(models.SalesOrder, {
+    Traking.belongsTo(models.SalesOrder, {
       foreignkey: 'salesOrders_id',
-      targetKey: 'id',
+      as: 'restreamento'
     });
   }
   return Traking; 

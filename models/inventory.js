@@ -3,10 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const Inventory = sequelize.define('Inventory', {
     products_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'Product',
-        key: 'id'
-      }
+      foreignkey: true,
     },
     measureUnit: {
       type: DataTypes.STRING,
@@ -30,14 +27,12 @@ module.exports = (sequelize, DataTypes) => {
     
     Inventory.hasMany(models.Product, {
       foreignkey: 'product_id',
-        targetKey: 'id',
-        as: 'inventario'
+      as: 'inventario'
     });
     
     Inventory.belongsTo(models.InventoryRecord, {
       foreignkey: 'inventorys_id',
-        targetKey: 'id',
-        as: 'movimentoInventario'
+      as: 'movimentoInventario'
     });
     
   }

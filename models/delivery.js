@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     salesOrders_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      foreignkey: true,
     },
     deliveryCode: {
       type: DataTypes.INTEGER,
@@ -21,13 +22,12 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Delivery.associate = (models) => {
-    /*
-    Delivery.belongToMany(models.SalesOrder, {
+    
+    Delivery.belongsTo(models.SalesOrder, {
       foreignkey: 'salesOrders_id',
-      targetKey: 'id',
       as: 'EntregaPedido'
     });
-    */
+    
   }
   return Delivery;
 };
