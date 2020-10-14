@@ -104,7 +104,7 @@
     
             <div class="vitrine-venda contentArea">
     
-            <% for (let cerveja of cervejas) { %>
+            <% cervejas.forEach(function(cerveja){ %>
             <div class="vitrine-destaque">
             <img src="<%= cerveja.img %>" class="cerveja-img" alt="<%= cerveja.name %>">
             <div class="info-produto">
@@ -113,11 +113,12 @@
                 <p>Tipo: <%= cerveja.tipo %></p>
                 <span class="preco">R$ <%= cerveja.price %></span>
                 <div class="btnContainer">
-                <span class="addToCart" onclick="addingToCart('<%= cerveja %>')">Adicionar</span>
+                <span class="addToCart">Adicionar</span>
+                <!--<span class="addToCart" onclick="addingToCart('<%= cerveja %>')">Adicionar</span>-->
                 </div>
             </div><!--info-produto-->
         </div><!--vitrine-destaque-->
-        <% } %>
+        <% }) %>
     
     
             </div><!--vitrine-venda-->
@@ -135,21 +136,18 @@
             document.querySelector('.sideCart').style.display = 'block';
         }
 
+        /*function addingToCart(cerveja) {
+            return cartItems.push(cerveja);
+        }*/
+
         function closeCart() {
             document.querySelector('.content-venda').style.width = '100%';
             document.querySelector('.sideCart').style.display = 'none';
         }
 
-        function addingToCart(cerveja) {
-            return cartItems.push({
-                id: this.id,
-                name: this.name,
-                img: this.img,
-                fabricante: this.fabricante,
-                tipo: this.tipo,
-                price: this.price
-            });
-        }
+        cartAddButton.forEach((item, cerveja) => {
+            item.addEventListener('click', openCart);
+        });
 
         /* function closeModal() {
             c('.pizzaWindowArea').style.opacity = 0;
