@@ -13,39 +13,22 @@
         <aside class="sideCart">
             <span onclick="closeCart()" class="close" title="">&times;</span>
             <p>Carrinho</p>
-            <div class="cart--item">
-                <img src="images/antuerpia.webp" alt="antuerpia" />
-                <div class="cart--item-nome">Antuerpia</div>
-                <div class="cart--item--qtarea">
-                    <button class="cart--item-qtmenos">-</button>
-                    <div class="cart--item--qt">1</div>
-                    <button class="cart--item-qtmais">+</button>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
                 </div>
+                <div class="cart--totalitem desconto">
+                    <span>Desconto (-10%)</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
             </div>
         </aside>
-
-        <!--<aside>
-            <div class="cart--area">
-                <div class="menu-closer">❌</div>
-                <h1>Suas Pizzas</h1>
-                <div class="cart"></div>
-                <div class="cart--details">
-                    <div class="cart--totalitem subtotal">
-                        <span>Subtotal</span>
-                        <span>R$ --</span>
-                    </div>
-                    <div class="cart--totalitem desconto">
-                        <span>Desconto (-10%)</span>
-                        <span>R$ --</span>
-                    </div>
-                    <div class="cart--totalitem total big">
-                        <span>Total</span>
-                        <span>R$ --</span>
-                    </div>
-                    <div class="cart--finalizar">Finalizar a compra</div>
-                </div>
-            </div>
-        </aside>-->
     
         <div class="content-venda">
             <div class="container">
@@ -113,7 +96,18 @@
                 <p>Tipo: <%= cerveja.tipo %></p>
                 <span class="preco">R$ <%= cerveja.price %></span>
                 <div class="btnContainer">
-                <span class="addToCart">Adicionar</span>
+                <span 
+                    class="addToCart" 
+                    onclick="addingToCart({
+                        id: '<%= cerveja.id %>',
+                        name: '<%= cerveja.name %>',
+                        img: '<%= cerveja.img %>',
+                        fabricante: '<%= cerveja.fabricante %>',
+                        tipo: '<%= cerveja.tipo %>',
+                        price: '<%= cerveja.price %>'
+                    })">
+                    Adicionar
+                </span>
                 <!--<span class="addToCart" onclick="addingToCart('<%= cerveja %>')">Adicionar</span>-->
                 </div>
             </div><!--info-produto-->
@@ -131,29 +125,74 @@
         const cartItems = [];
         const cartAddButton = document.querySelectorAll('.addToCart');
 
-        function openCart() {
+        /* function openCart() {
             document.querySelector('.content-venda').style.width = '70%';
             document.querySelector('.sideCart').style.display = 'block';
+        } */
+
+        // Add to cart
+        function addingToCart(cerveja) {
+            return cartItems.push(cerveja);
+
         }
 
-        /*function addingToCart(cerveja) {
-            return cartItems.push(cerveja);
-        }*/
+        // Adicionar elementos ao carrinho
+        const cart = document.querySelector('.sideCart');
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart--item';
+        const cartImg = document.createElement('img');
+        cartImg.className = 'cart--item--img';
+        const cartName = document.createElement('div');
+        cartName.className = 'cart--item-nome';
+        const cartQtArea = document.createElement('div');
+        cartQtArea.className = 'cart--item--qtarea';
+        const buttonQtMenos = document.createElement('button');
+        buttonQtMenos.className = 'cart--item-qtmenos';
+        buttonQtMenos.innerHTML = '-' ;
+        const cartItemQt = document.createElement('div');
+        cartItemQt.className = 'cart--item--qt';
+        cartItemQt.innerHTML = 1;
+        const buttonQtMais = document.createElement('button');
+        buttonQtMais.className = 'cart--item-qtmais';
+        buttonQtMais.innerHTML = '+'
 
+
+
+        // Cart Display and update
+        function updateCart() {
+            document.querySelector('.content-venda').style.width = '70%';
+            document.querySelector('.sideCart').style.display = 'block';
+
+            cartItems.map((item) => {
+                cartImg.src = item.img;
+                cartImg.alt = item.name;
+                cartName.innerHTML = item.name;
+            });
+
+            cart.appendChild(cartItem);
+            cartItem.appendChild(cartImg);
+            cartItem.appendChild(cartName);
+            cartQtArea.appendChild(buttonQtMenos);
+            cartQtArea.appendChild(cartItemQt);
+            cartQtArea.appendChild(buttonQtMais);
+            cartItem.appendChild(cartQtArea);
+
+            console.log(cart);
+            console.log(cartItems);
+
+        };
+        
+        // Close cart
         function closeCart() {
             document.querySelector('.content-venda').style.width = '100%';
             document.querySelector('.sideCart').style.display = 'none';
         }
 
-        cartAddButton.forEach((item, cerveja) => {
-            item.addEventListener('click', openCart);
+        // Add Button Open cart
+        cartAddButton.forEach((item) => {
+            item.addEventListener('click', updateCart);
         });
 
-        /* function closeModal() {
-            c('.pizzaWindowArea').style.opacity = 0;
-            setTimeout(()=>{
-            c('.pizzaWindowArea').style.display = 'none';
-        }, 500); */
     </script>
 
     

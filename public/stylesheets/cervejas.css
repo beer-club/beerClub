@@ -144,6 +144,10 @@ aside .close {
 	  font-size: 30px;
   }
 
+  .cart {
+    margin-bottom:20px;
+}
+
   .cart--item {
     display:flex;
 	align-items:center;
