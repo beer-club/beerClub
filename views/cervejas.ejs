@@ -146,26 +146,35 @@
             document.querySelector('.sideCart').style.display = 'block';
 
             // Criar elementos HTML do carrinho
-                const cart = document.querySelector('.sideCart');
+                const cart = document.querySelector('.sideCart');   
+                cart.innerHTML = ""             
+                
+            cartItems.map((item) => {
+
                 const cartItem = document.createElement('div');
                 cartItem.className = 'cart--item';
+                
                 const cartImg = document.createElement('img');
                 cartImg.className = 'cart--item--img';
+                
                 const cartName = document.createElement('div');
                 cartName.className = 'cart--item-nome';
+                
                 const cartQtArea = document.createElement('div');
                 cartQtArea.className = 'cart--item--qtarea';
-                const buttonQtMenos = document.createElement('button');
-                buttonQtMenos.className = 'cart--item-qtmenos';
-                buttonQtMenos.innerHTML = '-' ;
+                
                 const cartItemQt = document.createElement('div');
                 cartItemQt.className = 'cart--item--qt';
                 cartItemQt.innerHTML = '';
+
+                const buttonQtMenos = document.createElement('button');
+                buttonQtMenos.className = 'cart--item-qtmenos';
+                buttonQtMenos.innerHTML = '-' ;
+                
                 const buttonQtMais = document.createElement('button');
                 buttonQtMais.className = 'cart--item-qtmais';
                 buttonQtMais.innerHTML = '+';
 
-            cartItems.map((item) => {
                     console.log(item);
                     cartImg.src = item.img;
                     cartImg.alt = item.name;
@@ -174,7 +183,7 @@
                     item.qt = modalQt;
 
                     buttonQtMenos.addEventListener('click', () => {
-                        buttonQtMenos.addEventListener('click', () => {
+                        console.log("menos", item)
                         if (item.qt > 1) {
                             item.qt--;
                             cartItemQt.innerHTML = item.qt;
@@ -184,27 +193,30 @@
                     buttonQtMais.addEventListener('click', () => {
                         item.qt++;
                         cartItemQt.innerHTML = item.qt
-                    });
+                        console.log("mais", item)
                     });
 
                     total += item.price * item.qt;
                     totalDin.innerHTML = `R$ ${total}`;
 
-            });
-            
-            // Append child para adicionar elementos ao carrinho
                 cart.appendChild(cartItem);
                 cart.appendChild(cartDetails);
                 cartItem.appendChild(cartImg);
                 cartItem.appendChild(cartName);
+                cartItem.appendChild(cartQtArea);
                 cartQtArea.appendChild(buttonQtMenos);
                 cartQtArea.appendChild(cartItemQt);
                 cartQtArea.appendChild(buttonQtMais);
-                cartItem.appendChild(cartQtArea);
+
 
             console.log(cart);
             console.log(cartItems);
 
+
+            });
+            
+            // Append child para adicionar elementos ao carrinho
+              
         };
         
         // Close cart
