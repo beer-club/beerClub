@@ -51,18 +51,19 @@
 
   <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="" method="post">
+  <form class="modal-content animate" action="/sessions" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="">&times;</span>
       <img src="images/carrinho.jpg" alt="" class="CadastroLogin">
     </div>
 
     <div class="containerHeader">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+	  <label for="email"><b>Email</b></label>
+	  <input type="email" id="Email" placeholder="Enter Email" name="email" required>
+
+	  <label for="password"><b>Password</b></label>
+	  <input type="password" id="password" placeholder="Enter Password" name="password" required>
         
       <button type="submit">Login</button>
       <label>

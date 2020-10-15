@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const CustomerController = require('../controllers/customer');
+const SessionController = require('../controllers/session');
 const BeerController = require('../controllers/beer');
 
 /* GET home page. */
@@ -24,5 +25,8 @@ router.get('/acessorios', function(req, res, next) {
 
 // Clientes
 router.post('/customers', CustomerController.create);
+
+// Session
+router.post('/sessions', SessionController.login);
 
 module.exports = router;
