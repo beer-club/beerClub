@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+	-webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+/* CSS QUE ESTAVA NA home.css */
+header{
+	width: 100%;
+	height: 20vh;
+	padding:40px 2%;
+	/*max-height: 700px;*/
+	background-color: #ffffff;
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+}
+
+header nav{
+	float: right;
+}
+
+nav.mobile-menu{
+	color:#000;
+	cursor: pointer;
+	display: none;
+	width: 32px;
+	height: 32px;
+	background-image: url('../images/menu01.png');
+	background-size: 100% 100%;
+}
+
+nav.mobile-menu:hover ul{
+	opacity: 1;
+}
+
+nav.mobile-menu ul{
+	opacity: 0;
+	transition: 1s;
+	background-color: white;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 90px;
+	list-style-type: none;
+	text-align: center;
+}
+
+nav.mobile-menu ul li{
+	padding:8px 0;
+	transition: 0.4s;
+	border-bottom: 1px solid black;
+}
+
+nav.mobile-menu ul li:hover{
+	background-color:#f1f1f1;
+}
+
+nav.mobile-menu ul li a{
+	color: black;
+	text-decoration: none;
+}
+nav.mobile-menu ul button{
+	margin-top: 20px;
+	width: 30%;
+	height: 40px;
+	background-color: #31B0D5;
+}
+
+header .logo{
+	float: left;
+	width: 160px;
+	height: 40px;
+	
+}
+
+header nav.desktop-menu ul{
+	list-style-type: none;
+}
+
+header nav.desktop-menu li{
+	float: left;
+	padding:0 20px;
+}
+
+header nav.desktop-menu li a{
+	text-decoration: none;
+	color: #000;
+}
+
+.search-box{
+	position: absolute;
+	top:40%;
+	left: 45%;
+	transform:translate(-50%, -50%);
+	background-color: #fff;
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+} 
+.search-btn{
+	position: absolute;
+	top:75%;
+	left:190px;
+	height: 20px;
+	border-radius: 50%;
+	display: flex;
+	text-decoration: none;
+	justify-content: center;
+	align-items: center;
+}
+/* -----FIM-----*/
