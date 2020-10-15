@@ -22,11 +22,11 @@ module.exports = (sequelize, DataTypes) => {
     imagem: DataTypes.STRING,
     kindBeers_kindCode: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
       },
     productTypes_typeCode: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
     },
   }, {
     sequelize,
@@ -36,38 +36,39 @@ module.exports = (sequelize, DataTypes) => {
   
   Product.associate = (models) => {
     Product.belongsTo(models.KindBeer, {
-      foreignkey: 'kindBeers_kindCode',
-      as: 'tipoCerveja'
+      foreignKey: 'kindBeers_kindCode',
+      as: 'tipoCerveja',
+      targetKey: 'kindCode'
     });
     Product.belongsTo(models.ProductType, {
-      foreignkey: 'productTypes_typeCode',
+      foreignKey: 'productTypes_typeCode',
       as: 'tipoProduto'
     });
-    Product.belongsToMany(models.ProductSuplier, {
-      foreignkey: 'products_id',
+    Product.belongsToMany(models.Suplier, {
+      foreignKey: 'products_id',
       as: 'fornecedoresDoProduto',
-      through: 'productsupliers'
+      through: models.ProductSuplier
     });
     Product.belongsToMany(models.Subscription, {
-      foreignkey: 'products_id',
+      foreignKey: 'products_id',
       as: 'assinaturas',
       through: 'subscriptions'
     });
     Product.belongsToMany(models.OrderProduct, {
-      foreignkey: 'products_id',
+      foreignKey: 'products_id',
       as: 'produtosDoPedido',
       through: 'orderProducts'
     });
     Product.belongsToMany(models.ProductKit, {
-      foreignkey: 'products_id',
+      foreignKey: 'products_id',
       as: 'kitsDeProduto',
       through: 'productKits'
     });
-    Product.belongsToMany(models.Inventory, {
-      foreignkey: 'product_id',
+    /*Product.belongsToMany(models.Inventory, {
+      foreignKey: 'product_id',
       as: 'estoque',
       through: 'inventorys'
-    });
+    });*/
   } 
   return Product;
 };

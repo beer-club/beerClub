@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     customer_id: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
     },
   }, {
     sequelize,
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   });
   RecoverPassword.associate = (models) => {
     RecoverPassword.hasMany(models.Customer, {
-      foreignkey: 'customers_id',
+      foreignKey: 'customers_id',
       as: 'senha'
     });
     

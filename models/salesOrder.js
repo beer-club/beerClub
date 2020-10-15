@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     customers_id: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
     },
     date: {
       type: DataTypes.DATE,
@@ -32,22 +32,22 @@ module.exports = (sequelize, DataTypes) => {
   
   SalesOrder.associate = (models) => {
     SalesOrder.belongsTo(models.Customer, {
-        foreignkey: 'customers_id',
+        foreignKey: 'customers_id',
         as: 'cliente',
     });
     SalesOrder.belongsToMany(models.OrderProduct, {
-      foreignkey: 'salesorders_id',
+      foreignKey: 'salesorders_id',
       targetKey: 'id',
       as: 'pedido',
       through: 'orderproducts'
     });
     SalesOrder.hasMany(models.Traking, {
-        foreignkey: 'salesOrders_id',
+        foreignKey: 'salesOrders_id',
         as: 'b'
         
     });
     SalesOrder.hasMany(models.Delivery, {
-        foreignkey: 'salesOrders_id',
+        foreignKey: 'salesOrders_id',
         as: 'c'
         
     });

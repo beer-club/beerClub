@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const Inventory = sequelize.define('Inventory', {
     products_id: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
     },
     measureUnit: {
       type: DataTypes.STRING,
@@ -23,18 +23,18 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'inventorys'
   });
   
-  Inventory.associate = (models) => {
+  /*Inventory.associate = (models) => {
     
     Inventory.hasMany(models.Product, {
-      foreignkey: 'product_id',
+      foreignKey: 'product_id',
       as: 'inventario'
     });
     
     Inventory.belongsTo(models.InventoryRecord, {
-      foreignkey: 'inventorys_id',
+      foreignKey: 'inventorys_id',
       as: 'movimentoInventario'
     });
     
-  }
+  }*/
   return Inventory;
 };

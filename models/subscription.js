@@ -3,11 +3,11 @@ module.exports = (sequelize, DataTypes) => {
   const Subscription = sequelize.define('Subscription', {
     customer_id: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
     },
     products_id: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
     },
   }, {
     sequelize,

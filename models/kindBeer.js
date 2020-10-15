@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   });
   KindBeer.associate = (models) => {
     KindBeer.hasMany(models.Product, {
-      foreignkey: 'kindBeers_kindCode',
+      foreignKey: 'kindBeers_kindCode',
       as: 'tipoCerveja'
     });
     

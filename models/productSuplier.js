@@ -3,19 +3,16 @@ module.exports = (sequelize, DataTypes) => {
   const ProductSuplier = sequelize.define('ProductSuplier', {
     products_id: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
     },
     supliers_id: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
     },
   }, {
     sequelize,
     modelName: 'ProductSuplier',
     tableName: 'productSupliers'
   });
-  /*ProductSuplier.associate = (models) => {
-    // Relação
-  }*/
   return ProductSuplier;
 };

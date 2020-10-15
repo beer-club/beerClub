@@ -25,12 +25,11 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'supliers'
   });
   Suplier.associate = (models) => {
-    Suplier.belongsToMany(models.ProductSuplier, {
-      foreignkey: 'supliers_id',
+    Suplier.belongsToMany(models.Product, {
+      foreignKey: 'supliers_id',
       as: 'ProdutosDoFornecedor',
-      through: 'productsupliers'
+      through: models.ProductSuplier
     });
-  
   };
   return Suplier;
 };
