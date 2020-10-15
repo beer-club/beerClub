@@ -74,21 +74,21 @@
     
             <% cervejas.forEach(function(cerveja){ %>
             <div class="vitrine-destaque">
-            <img src="<%= cerveja.img %>" class="cerveja-img" alt="<%= cerveja.name %>">
+            <img src="<%= cerveja.imagem %>" class="cerveja-img" alt="<%= cerveja.productName %>">
             <div class="info-produto">
-                <h2><%= cerveja.name %></h2>
+                <h2><%= cerveja.productName %></h2>
                 <p>Fabricante: <%= cerveja.fabricante %></p>
-                <p>Tipo: <%= cerveja.tipo %></p>
+                <p>Tipo: <%= cerveja.tipoCerveja.kindName %></p>
                 <span class="preco">R$ <%= cerveja.price %></span>
                 <div class="btnContainer">
                 <span 
                     class="addToCart" 
                     onclick="addingToCart({
                         id: '<%= cerveja.id %>',
-                        name: '<%= cerveja.name %>',
-                        img: '<%= cerveja.img %>',
+                        name: '<%= cerveja.productName %>',
+                        img: '<%= cerveja.imagem %>',
                         fabricante: '<%= cerveja.fabricante %>',
-                        tipo: '<%= cerveja.tipo %>',
+                        tipo: '<%= cerveja.tipoCerveja.kindName %>',
                         price: '<%= cerveja.price %>'
                     })">
                     Adicionar
@@ -143,8 +143,6 @@
         function updateCart() {
             document.querySelector('.content-venda').style.width = '70%';
             document.querySelector('.sideCart').style.display = 'block';
-            document.querySelector('.sideCart').style.float = 'left';
-            document.querySelector('.sideCart').style.marginLeft = '970px';
 
             // Criar elementos HTML do carrinho
                 const cart = document.querySelector('.sideCart');

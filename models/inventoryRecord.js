@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const InventoryRecord = sequelize.define('InventoryRecord', {
     inventorys_products_id: {
       type: DataTypes.INTEGER,
-      foreignkey: true,
+      foreignKey: true,
     },
     lot: {
       type: DataTypes.INTEGER,
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   InventoryRecord.associate = (models) => {
     
     InventoryRecord.hasMany(models.Inventory, {
-      foreignkey: 'inventorys_id',
+      foreignKey: 'inventorys_id',
       as: 'movimentoInventario'
     });
     

@@ -4,12 +4,12 @@ module.exports = (sequelize, DataTypes) => {
     products_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      foreignkey: true,
+      foreignKey: true,
     },
     products_id1: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      foreignkey: true,
+      foreignKey: true,
     },
   }, {
     sequelize,
