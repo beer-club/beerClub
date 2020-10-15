@@ -1,0 +1,227 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+	-webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+/* CSS QUE ESTAVA NA home.css */
+header{
+	width: 100%;
+	height: 20vh;
+	padding:40px 2%;
+	/*max-height: 700px;*/
+	background-color: #ffffff;
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav.mobile-menu{
+	color:#000;
+	cursor: pointer;
+	display: none;
+	width: 32px;
+	height: 32px;
+	background-image: url('../images/menu01.png');
+	background-size: 100% 100%;
+}
+
+nav.mobile-menu:hover ul{
+	opacity: 1;
+}
+
+nav.mobile-menu ul{
+	opacity: 0;
+	transition: 1s;
+	background-color: white;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 90px;
+	list-style-type: none;
+	text-align: center;
+}
+
+nav.mobile-menu ul li{
+	padding:8px 0;
+	transition: 0.4s;
+	border-bottom: 1px solid black;
+}
+
+nav.mobile-menu ul li:hover{
+	background-color:#f1f1f1;
+}
+
+nav.mobile-menu ul li a{
+	color: black;
+	text-decoration: none;
+}
+nav.mobile-menu ul button{
+	margin-top: 20px;
+	width: 30%;
+	height: 40px;
+	background-color: #31B0D5;
+}
+
+header .logo{
+	float: left;
+	width: 160px;
+	height: 40px;
+	
+}
+
+header nav.desktop-menu ul{
+	list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav.desktop-menu li{
+	padding:0 20px;
+}
+
+header nav.desktop-menu li a{
+	text-decoration: none;
+	color: #000;
+}
+
+button {
+    background-color: #31B0D5;
+    color: white;
+    margin-top: -10px;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  .button-container button{
+    margin-top: 0;
+    margin-right: 15px;
+}
+
+.button-container button:last-child{
+    margin-right: 0px;
+}
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+
+
+img.CadastroLogin{
+    width: 10%;
+    border-radius:25%;
+  }
+  
+  .containerHeader {
+    max-width: 1280px;
+    margin:0 auto;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  .search-box{
+	background-color: #fff;
+	border-radius: 40px;
+    padding: 10px;
+    width: 350px;
+} 
+.search-btn{
+	margin-left: -30px;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%; 
+   }
+  
+  
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+/* -----FIM-----*/

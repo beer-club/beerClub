@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+	-webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+ /* CSS QUE ESTAVA NA home.css */
+.container{
+	max-width: 1280px;
+	margin:0 auto;
+}
+
+.clear{
+	clear: both;
+}
+
+/* -----FIM-----*/
+
+@media screen and (max-width: 600px) {
+
+    container-footer {
+      display: none;
+    }
+  
+  }
+  

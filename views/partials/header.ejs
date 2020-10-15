@@ -4,7 +4,8 @@
 	<title>BeerClub</title>
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-	<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+	
+	<link href="css/header.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8" />
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -13,7 +14,7 @@
 <body>
 
 <header>
-	<div class="container">
+	<div class="containerHeader">
 		<a href="/"> <img src="images/logo.png" class="logo"> </a>
 		<nav class="desktop-menu">
         <div class="search-box">
@@ -27,8 +28,12 @@
 			<li><a href="/acessorios">Acessórios</a></li>
 			<li><a href="/kits">Kits</a></li>
 			<li><a href="/cervejas">Cervejas</a></li>
-			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-			<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Cadastre-se</button>
+
+			<li class="button-container">
+				<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+				<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Cadastre-se</button>
+			</li>
+		
 		</ul>    
 	</nav>
 
@@ -52,7 +57,7 @@
       <img src="images/carrinho.jpg" alt="" class="CadastroLogin">
     </div>
 
-    <div class="container">
+    <div class="containerHeader">
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -65,7 +70,7 @@
       </label>
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
+    <div class="containerHeader" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
@@ -80,7 +85,7 @@
 		<img src="images/carrinho.jpg" alt="" class="CadastroLogin">
 	  </div>
   
-	  <div class="container">
+	  <div class="containerHeader">
 		<label for="username"><b>Username</b></label>
 		<input type="text" id="username" placeholder="Enter Username" name="username" required>
 
@@ -103,7 +108,7 @@
 		</label>
 	  </div>
   
-	  <div class="container" style="background-color:#f1f1f1">
+	  <div class="containerHeader" style="background-color:#f1f1f1">
 		<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
 		<span class="psw">Forgot <a href="#">password?</a></span>
 	  </div>
