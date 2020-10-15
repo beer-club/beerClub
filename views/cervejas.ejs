@@ -174,15 +174,17 @@
                     item.qt = modalQt;
 
                     buttonQtMenos.addEventListener('click', () => {
-                        if (modalQt > 1) {
-                            modalQt--;
-                            cartItemQt.innerHTML = modalQt;
+                        buttonQtMenos.addEventListener('click', () => {
+                        if (item.qt > 1) {
+                            item.qt--;
+                            cartItemQt.innerHTML = item.qt;
                         }
                     });
 
                     buttonQtMais.addEventListener('click', () => {
-                        modalQt++;
-                        cartItemQt.innerHTML = modalQt
+                        item.qt++;
+                        cartItemQt.innerHTML = item.qt
+                    });
                     });
 
                     total += item.price * item.qt;
