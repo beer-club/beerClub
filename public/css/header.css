@@ -22,7 +22,11 @@ header{
 }
 
 header nav{
-	float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
 }
 
 nav.mobile-menu{
@@ -81,10 +85,11 @@ header .logo{
 
 header nav.desktop-menu ul{
 	list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 
 header nav.desktop-menu li{
-	float: left;
 	padding:0 20px;
 }
 
@@ -93,25 +98,130 @@ header nav.desktop-menu li a{
 	color: #000;
 }
 
-.search-box{
-	position: absolute;
-	top:40%;
-	left: 45%;
-	transform:translate(-50%, -50%);
+button {
+    background-color: #31B0D5;
+    color: white;
+    margin-top: -10px;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  .button-container button{
+    margin-top: 0;
+    margin-right: 15px;
+}
+
+.button-container button:last-child{
+    margin-right: 0px;
+}
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+
+
+img.CadastroLogin{
+    width: 10%;
+    border-radius:25%;
+  }
+  
+  .container {
+    max-width: 1280px;
+    margin:0 auto;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  .search-box{
 	background-color: #fff;
-	height: 40px;
 	border-radius: 40px;
-	padding: 10px;
+    padding: 10px;
+    width: 350px;
 } 
 .search-btn{
-	position: absolute;
-	top:75%;
-	left:190px;
-	height: 20px;
-	border-radius: 50%;
-	display: flex;
-	text-decoration: none;
-	justify-content: center;
-	align-items: center;
+	margin-left: -30px;
 }
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%; 
+   }
+  
+  
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
 /* -----FIM-----*/
