@@ -128,7 +128,7 @@
         const totalText = document.createElement('span');
         totalText.innerHTML = 'Total';
         const totalDin = document.createElement('span');
-        totalDin.innerHTML = 'R$ 10.000,00';
+        totalDin.innerHTML = '';
         const finCompra = document.createElement('div');
         finCompra.className = 'cart--finalizar';
         finCompra.innerHTML = 'Finalizar Compra';
@@ -137,7 +137,8 @@
         cartDetails.appendChild(cartTotal);
         cartDetails.appendChild(finCompra);
         console.log(cartDetails);
-
+        let total = 0;
+        let modalQt = 1;
         
         // Cart Display and update
         function updateCart() {
@@ -159,7 +160,7 @@
                 buttonQtMenos.innerHTML = '-' ;
                 const cartItemQt = document.createElement('div');
                 cartItemQt.className = 'cart--item--qt';
-                cartItemQt.innerHTML = 1;
+                cartItemQt.innerHTML = '';
                 const buttonQtMais = document.createElement('button');
                 buttonQtMais.className = 'cart--item-qtmais';
                 buttonQtMais.innerHTML = '+';
@@ -168,6 +169,25 @@
                     cartImg.src = item.img;
                     cartImg.alt = item.name;
                     cartName.innerHTML = item.name;
+                    cartItemQt.innerHTML = modalQt;
+
+                    buttonQtMenos.addEventListener('click', () => {
+                        if (modalQt > 1) {
+                            modalQt--;
+                            cartItemQt.innerHTML = modalQt;
+                        } else {
+                            cartItems.splice(item, 1);
+                        }
+                    });
+
+                    buttonQtMais.addEventListener('click', () => {
+                        modalQt++;
+                        cartItemQt.innerHTML = modalQt
+                    });
+
+                    total += item.price * item.qt;
+                    /* totalDin.innerHTML = `R$ ${total.fixed(2)}`; */
+
             });
             
             // Append child para adicionar elementos ao carrinho

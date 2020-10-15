@@ -187,23 +187,23 @@ aside .close {
 }
 
 .cart--totalitem {
-    padding:15px 0;
+    padding:7px 0;
     border-top:1px solid #79b9dd;
     color:#315970;
     display:flex;
     justify-content: space-between;
-    font-size:15px;
+    font-size:12px;
 }
 .cart--totalitem span:first-child {
     font-weight: bold;
 }
 .cart--totalitem.big {
-    font-size:20px;
+    font-size:15px;
     color:#000;
     font-weight: bold;
 }
 .cart--finalizar {
-    padding:20px 30px;
+    padding:10px 20px;
     border-radius:20px;
     background-color:#48d05f;
     color:#FFF;
@@ -409,16 +409,6 @@ aside {
 	.search2, .form-venda-wraper, .vitrine-destaque {
 		display: inline-block;
 		justify-self: center;
-	}
-
-	.sideCart {
-		width:auto;
-        position:fixed;
-        left:100vw;
-        right:0;
-        top:0;
-        bottom:0;
-        transition: all ease .2s;
 	}
 
 }
