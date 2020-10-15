@@ -139,7 +139,7 @@ img.CadastroLogin{
     border-radius:25%;
   }
   
-  .container {
+  .containerHeader {
     max-width: 1280px;
     margin:0 auto;
     display: flex;
