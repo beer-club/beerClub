@@ -74,18 +74,16 @@
             <div class="vitrine-destaque">
             <img src="<%= cerveja.imagem %>" class="cerveja-img" alt="<%= cerveja.productName %>">
             <div class="info-produto">
-                <h2><%= cerveja.productName %></h2>
-                <p>Fabricante: <%= cerveja.fabricante %></p>
+                <h2><%= cerveja.productName %></h2> 
                 <p>Tipo: <%= cerveja.tipoCerveja.kindName %></p>
                 <span class="preco">R$ <%= cerveja.price %></span>
                 <div class="btnContainer">
                 <span 
-                    class="addToCart" 
+                    class="addToCart"
                     onclick="addingToCart({
                         productCode: '<%= cerveja.productCode %>',
                         name: '<%= cerveja.productName %>',
                         img: '<%= cerveja.imagem %>',
-                        fabricante: '<%= cerveja.fabricante %>',
                         tipo: '<%= cerveja.tipoCerveja.kindName %>',
                         price: '<%= cerveja.price %>'
                     })">

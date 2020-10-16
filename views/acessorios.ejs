@@ -1,11 +1,17 @@
 <%- include('partials/header')%>
+<script defer src="/js/cartFront.js"></script>
+<link href="css/cervejas.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 
-    <link href="css/acessorios.css" rel="stylesheet" type="text/css">
     <section class="venda">
         <div class="line-titulo">
                 <div class="ln1"></div>
                 <h2>Acessorios</h2>
         </div><!--line-titulo-->
+
+        <aside class="sideCart">
+        </aside>
     
         <div class="content-venda">
             <div class="container">
@@ -18,7 +24,7 @@
                         </div><!--barra-preco-->
                         <div class="valor-pesquisa">
                             <p>R$0,00</p>
-                            <p>R$10.000,00</p>
+                            <p>R$5.000,00</p>
                         </div><!--valor-pesquisa-->
                     </div><!--search1-->
     
@@ -39,7 +45,7 @@
                             <label for="item2">
                                 <div class="circle"></div>
                             </label>
-                            <span>Copos</span>
+                            <span>IPA</span>
                         </div><!--form-venda-wraper-->
     
     
@@ -48,7 +54,7 @@
                             <label for="item3">
                                 <div class="circle"></div>
                             </label>
-                            <span>Geladeiras e freezers</span>
+                            <span>Pilsen</span>
                         </div><!--form-venda-wraper-->
     
                         <div class="form-venda-wraper">
@@ -56,7 +62,7 @@
                             <label for="item4">
                                 <div class="circle"></div>
                             </label>
-                            <span>Outros</span>
+                            <span>Trigo</span>
                         </div><!--form-venda-wraper-->
                         </form>
                     </div><!--search2-->
@@ -64,100 +70,36 @@
     
             <div class="vitrine-venda contentArea">
     
-    
+            <% cervejas.forEach(function(cerveja){ %>
             <div class="vitrine-destaque">
-            <img src="images/copoColorado.webp" class="cerveja-img" alt="copoColorado">
+            <img src="<%= cerveja.imagem %>" class="cerveja-img" alt="<%= cerveja.productName %>">
             <div class="info-produto">
-                <h2>Copo Colorado 350ml</h2>
-                <p>Fabricante: Colorado</p>
-                <p>Tipo: Copos</p>
-                <span class="preco">R$ 15,90</span>
+                <h2><%= cerveja.productName %></h2> 
+                <p>Tipo: <%= cerveja.tipoCerveja.kindName %></p>
+                <span class="preco">R$ <%= cerveja.price %></span>
                 <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
+                <span 
+                    class="addToCart"
+                    onclick="addingToCart({
+                        productCode: '<%= cerveja.productCode %>',
+                        name: '<%= cerveja.productName %>',
+                        img: '<%= cerveja.imagem %>',
+                        tipo: '<%= cerveja.tipoCerveja.kindName %>',
+                        price: '<%= cerveja.price %>'
+                    })">
+                    Adicionar
+                </span>
+                <!--<span class="addToCart" onclick="addingToCart('<%= cerveja %>')">Adicionar</span>-->
                 </div>
             </div><!--info-produto-->
         </div><!--vitrine-destaque-->
+        <% }) %>
     
-        <div class="vitrine-destaque">
-            <img src="images/abridor.webp" class="cerveja-img" alt="abridor">
-            <div class="info-produto">
-                <h2>Abridor de garrafas Budweiser-Fifa</h2>
-                <p>Fabricante: Emporio da Cerveja</p>
-                <p>Tipo: Outros</p>
-                <span class="preco">R$ 14,90</span>
-                <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
-                </div>
-            </div><!--info-produto-->
-        </div><!--vitrine-destaque-->
-    
-        <div class="vitrine-destaque">
-            <img src="images/cervejeiraColorado.webp" class="cerveja-img" alt="coloradoGeladeira">
-            <div class="info-produto">
-                <h2>Cervejeira Colorado 37L (127V)</h2>
-                <p>Fabricante: Colorado</p>
-                <p>Tipo: Geladeiras e freezers</p>
-                <span class="preco">R$ 1.450,00</span>
-                <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
-                </div>
-            </div><!--info-produto-->
-        </div><!--vitrine-destaque-->
-    
-        <div class="vitrine-destaque">
-            <img src="images/moletomColorado.webp" class="cerveja-img" alt="coloradoMoletom">
-            <div class="info-produto">
-                <h2>Moletom Cinza Urso</h2>
-                <p>Fabricante: Colorado</p>
-                <p>Tipo: Outros</p>
-                <span class="preco">R$ 179,90</span>
-                <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
-                </div>
-            </div><!--info-produto-->
-        </div><!--vitrine-destaque-->
-    
-        <div class="vitrine-destaque">
-            <img src="images/baldebudweiser.webp" class="cerveja-img" alt="budweiserBalde">
-            <div class="info-produto">
-                <h2>Balde Budweiser</h2>
-                <p>Fabricante: Budweiser</p>
-                <p>Tipo: Outros</p>
-                <span class="preco">R$ 89,90</span>
-                <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
-                </div>
-            </div><!--info-produto-->
-        </div><!--vitrine-destaque-->
-    
-        <div class="vitrine-destaque">
-            <img src="images/copoSerramalte.gif" class="cerveja-img" alt="Serramalte">
-            <div class="info-produto">
-                <h2>Copo Serramalte 340ml</h2>
-                <p>Fabricante: Serramalte</p>
-                <p>Tipo: Copos</p>
-                <span class="preco">R$ 14,90</span>
-                <div class="btnContainer">
-                <span class="arrLeft">-</span>
-                    <span class="qtyProd" href="">1</span>
-                <span class="arrRight">+</span>
-                </div>
-            </div><!--info-produto-->
-        </div><!--vitrine-destaque-->
     
             </div><!--vitrine-venda-->
             </div><!--container-->
         </div><!--content-venda-->
     
     </section><!--venda-->
+    
 <%- include('partials/footer')%>
