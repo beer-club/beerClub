@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'recoverPasswords'
   });
   RecoverPassword.associate = (models) => {
-    RecoverPassword.hasMany(models.Customer, {
+    RecoverPassword.belongsTo(models.Customer, {
       foreignKey: 'customers_id',
       as: 'senha'
     });
