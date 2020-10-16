@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true,
     },
-    customer_id: {
+    customers_id: {
       type: DataTypes.INTEGER,
       foreignKey: true,
     },
