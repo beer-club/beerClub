@@ -2,7 +2,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family:'Oswald', sans-serif;
+	font-family: "Open Sans";
+	-webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
 }
 
 html,body{
