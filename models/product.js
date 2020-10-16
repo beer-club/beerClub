@@ -49,10 +49,10 @@ module.exports = (sequelize, DataTypes) => {
       as: 'fornecedoresDoProduto',
       through: models.ProductSuplier
     });
-    Product.belongsToMany(models.Subscription, {
+    Product.belongsToMany(models.Customer, {
       foreignKey: 'products_id',
       as: 'assinaturas',
-      through: 'subscriptions'
+      through: models.Subscription
     });
     Product.belongsToMany(models.OrderProduct, {
       foreignKey: 'products_id',

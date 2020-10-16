@@ -9,7 +9,7 @@ module.exports = CustomerController = {
         const { email, password, cpf, phoneNumber, username } = req.body;
         
         console.log(email, password, cpf, phoneNumber, username);
-/*
+
         // Check da existencia do usuario
         const existingUser = await Customer.findOne({ 
             where: { email: email }
@@ -18,7 +18,7 @@ module.exports = CustomerController = {
         if (existingUser) {
             return res.status(400).json({ error: 'step1-Usuario ja existe!' });
         };
-        */
+
         // Hash da senha
         let hashedPassword;
 
