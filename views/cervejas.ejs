@@ -146,6 +146,7 @@
         let total = 0;
         let modalQt = 1;
 
+        // Criação do botao de fechar do carrinho e do paragafro
         const cart = document.querySelector('.sideCart');
         const cartCloseButton = document.createElement('span');
         const cartTitle = document.createElement('p');
@@ -155,6 +156,7 @@
         cartTitle.innerHTML = 'Carrinho';  
         
 
+        // Funcao que atualiza o carrinho 
         function updateCart() {
             document.querySelector('.content-venda').style.width = '70%';
             document.querySelector('.sideCart').style.display = 'block';
