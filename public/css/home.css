@@ -122,11 +122,11 @@ h2 {
 .plans {
   background-color: #f5f5f5;
   margin-bottom: 30px;
-  margin-top: 300px;
+  margin-top: 100px;
 }
 .optionsOfPlans{
   display: flex;
-  margin-left: 17%;
+  margin-left: 6%;
 
 }
 .fistPlan,
@@ -264,7 +264,7 @@ h2 {
     }
 
     section .emailInputBottom{
-      width:80%;
+      width: 40%;
       margin: 0;
       margin: 20px 0 0 40px;
   
@@ -307,7 +307,7 @@ h2 {
     }
  }
 
-@media only screen and (min-width: 1382px){
+@media only screen and (max-width: 1382px){
     header{
       width: 100%;
     }
@@ -320,7 +320,7 @@ h2 {
   }
   section .btn_enviar{
     margin-top: 1067px;
-    margin-left: -179gipx;
+    margin-left: -179px;
   }
   section .conosco p{
      margin-left:200px; 
@@ -521,9 +521,11 @@ section.sessao1{
 .fiqueDentro{
   text-align: center;
 }
+
 .formNewNotici{
 
 }
+
 .form-contro{
   width: 100%;
   height: 80px;
@@ -547,7 +549,7 @@ section.sessao1{
     border-radius: 30px;
 }
 .emailInputBottom{
-  width: 680px;
+  width: 480px;
   margin-left: 20%;
   margin-top: 20.5px;
   border: 2px solid #000;
@@ -558,9 +560,9 @@ section.sessao1{
   background-color:#000;
   position: absolute;
   top: 100%;
-  left: 73.8%;
+  left: 1100px;
   padding:13px;
-  margin-top: 1243px;
+  margin-top: 1130px;
   border-radius: 21px;
   color:white;
 }

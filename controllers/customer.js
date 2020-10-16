@@ -67,5 +67,6 @@ module.exports = CustomerController = {
             username: createdCustomer.username,
             token: token
         });
+        window.location = "/";
     }
 }
