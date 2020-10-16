@@ -193,11 +193,8 @@
                     buttonQtMais.addEventListener('click', () => {
                         item.qt++;
                         cartItemQt.innerHTML = item.qt
-                        console.log("mais", item)
+                        console.log("mais", item);
                     });
-
-                    total += item.price * item.qt;
-                    totalDin.innerHTML = `R$ ${total}`;
 
                 cart.appendChild(cartItem);
                 cart.appendChild(cartDetails);
@@ -208,10 +205,10 @@
                 cartQtArea.appendChild(cartItemQt);
                 cartQtArea.appendChild(buttonQtMais);
 
-
-            console.log(cart);
-            console.log(cartItems);
-
+                // Total do item 
+                item.totalDoITem = item.price * item.qt;
+                total += item.totalDoITem;
+                totalDin.innerHTML = `R$ ${total}`;
 
             });
             
