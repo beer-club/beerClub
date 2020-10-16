@@ -11,8 +11,6 @@
         </div><!--line-titulo-->
 
         <aside class="sideCart">
-            <span onclick="closeCart()" class="close" title="">&times;</span>
-            <p>Carrinho</p>
         </aside>
     
         <div class="content-venda">
@@ -147,15 +145,23 @@
         console.log(cartDetails);
         let total = 0;
         let modalQt = 1;
+
+        const cart = document.querySelector('.sideCart');
+        const cartCloseButton = document.createElement('span');
+        const cartTitle = document.createElement('p');
+        cartCloseButton.className = 'close';
+        cartCloseButton.innerHTML = '&times;';
+        cartCloseButton.onclick = closeCart;
+        cartTitle.innerHTML = 'Carrinho';  
         
 
         function updateCart() {
             document.querySelector('.content-venda').style.width = '70%';
             document.querySelector('.sideCart').style.display = 'block';
 
-            
-                const cart = document.querySelector('.sideCart');   
-                cart.innerHTML = ""             
+               
+            cart.innerHTML = "" 
+   
                 
             cartItems.map((item) => {
 
@@ -205,6 +211,8 @@
                         console.log("mais", item);
                     });
 
+                cart.appendChild(cartCloseButton);
+                cart.appendChild(cartTitle); 
                 cart.appendChild(cartItem);
                 cart.appendChild(cartDetails);
                 cartItem.appendChild(cartImg);
