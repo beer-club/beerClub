@@ -12,7 +12,7 @@ module.exports = {
         allowNull: false,
         unique: true,
       },
-      customer_id: {
+      customers_id: {
         type: Sequelize.INTEGER,
         references: {
           model: 'customers',

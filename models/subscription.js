@@ -1,7 +1,7 @@
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   const Subscription = sequelize.define('Subscription', {
-    customer_id: {
+    customers_id: {
       type: DataTypes.INTEGER,
       foreignKey: true,
     },
