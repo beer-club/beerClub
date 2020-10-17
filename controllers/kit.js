@@ -1,7 +1,7 @@
 const { Product } = require('../models');
 const { Sequelize } = require('../models');
 
-module.exports = BeerController = {
+module.exports = KitController = {
     get: async (req, res) => {
         try {
             produtos = await Product.findAll({
@@ -10,12 +10,12 @@ module.exports = BeerController = {
                     'tipoProduto',
                     'fornecedoresDoProduto'
                 ], where: {
-                    productTypes_typeCode: 1
+                    productTypes_typeCode: 3
                 }
             });
             res.render(
-                'cervejas',{
-                    title: 'Cervejas',
+                'kits',{
+                    title: 'kits',
                     cervejas: produtos
                 }
             );

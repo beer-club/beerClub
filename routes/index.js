@@ -2,7 +2,9 @@ var express = require('express');
 var router = express.Router();
 const CustomerController = require('../controllers/customer');
 const SessionController = require('../controllers/session');
+const KitController = require('../controllers/kit');
 const BeerController = require('../controllers/beer');
+const AcessorioController = require('../controllers/acessorios');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,13 +17,9 @@ router.get('/clube', function(req, res, next) {
 
 router.get('/cervejas', BeerController.get);
 
-router.get('/kits', function(req, res, next) {
-  res.render('kits', { title: 'Express' });
-});
+router.get('/kits', KitController.get);
 
-router.get('/acessorios', function(req, res, next) {
-  res.render('acessorios', { title: 'Express' });
-});
+router.get('/acessorios', AcessorioController.get);
 
 // Clientes
 router.post('/customers', CustomerController.create);
