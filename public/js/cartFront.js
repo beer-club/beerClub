@@ -52,7 +52,7 @@
         // Criação do botao de fechar do carrinho e do paragafro
         const cart = document.querySelector('.sideCart');
         const itemContainer = document.createElement('div');
-            itemContainer.classList.add('itemContainer');   
+        itemContainer.classList.add('itemContainer');   
         const cartCloseButton = document.createElement('span');
         const cartTitle = document.createElement('p');
         cartCloseButton.className = 'close';
@@ -65,15 +65,11 @@
         function updateCart() {
             document.querySelector('.content-venda').style.width = '70%';
             document.querySelector('.sideCart').style.display = 'block';
-
                
             cart.innerHTML = ""
             itemContainer.innerHTML = ""
-   
                 
-            cartItems.map((item) => {
-
-                
+            for (let item in cartItems) {
                 // Criar elementos HTML do carrinho
                 const cartItem = document.createElement('div');
                 cartItem.className = 'cart--item';
@@ -99,27 +95,11 @@
                 buttonQtMais.className = 'cart--item-qtmais';
                 buttonQtMais.innerHTML = '+';
 
-
-                    console.log(item);
-                    cartImg.src = item.img;
-                    cartImg.alt = item.name;
-                    cartName.innerHTML = item.name;
-                    cartItemQt.innerHTML = modalQt;
-                    item.qt = modalQt;
-
-                    buttonQtMenos.addEventListener('click', () => {
-                        console.log("menos", item)
-                        if (item.qt > 1) {
-                            item.qt--;
-                            cartItemQt.innerHTML = item.qt;
-                        }
-                    });
-
-                    buttonQtMais.addEventListener('click', () => {
-                        item.qt++;
-                        cartItemQt.innerHTML = item.qt
-                        console.log("mais", item);
-                    });
+                cartImg.src = cartItems[item].img;
+                cartImg.alt = cartItems[item].name;
+                cartName.innerHTML = cartItems[item].name;
+                cartItemQt.innerHTML = modalQt;
+                cartItems[item].qt = modalQt;
 
                 // Append child para adicionar elementos ao carrinho
                 cart.appendChild(cartCloseButton);
@@ -132,16 +112,21 @@
                 cartItem.appendChild(cartQtArea);
                 cartQtArea.appendChild(buttonQtMenos);
                 cartQtArea.appendChild(cartItemQt);
-                cartQtArea.appendChild(buttonQtMais);
-
-                // Total do item 
-                item.totalDoITem = item.price * item.qt;
-                total += item.totalDoITem;
-                totalDin.innerHTML = `R$ ${total}`;
-
-            });
+                cartQtArea.appendChild(buttonQtMais); 
+                
+                getTotal(cartItems);
+            }
               
         };
+
+        // Calculo do total do carrinho
+        function getTotal(cartItems) {
+            let total = 0;
+            for (item in cartItems) {
+                total += cartItems[item].qt * cartItems[item].price;
+            };
+            totalDin.innerHTML = `R$ ${total.toFixed(2)}`;
+        }
         
         // Close cart para fechar o carrinho
         function closeCart() {
